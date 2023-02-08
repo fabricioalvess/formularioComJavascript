@@ -43,3 +43,24 @@ document.getElementById("mostrar_check").onclick = function(){
     }
 
 }
+
+//data
+function zero_a_esquerda(number){
+    if(number >=0 && number <=9){
+        var formatado_data = number.toString();
+        formatado_data = "0"+ formatado_data;
+    }else{
+        var formatado_data = number.toString();
+    }
+    return formatado_data;
+}
+document.getElementById("mostrar_data").onclick = function(){
+
+    var data_selecionada = document.getElementById("data_evento").value;
+    var data_formatada = new Date(data_selecionada);
+    var dia =zero_a_esquerda( data_formatada.getDate());
+    var mes =zero_a_esquerda( data_formatada.getMonth());
+    var ano =zero_a_esquerda( data_formatada.getFullYear());
+
+    document.getElementById("resultado_data").innerHTML = dia + "/"+ mes + "/"+ ano
+}

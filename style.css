@@ -43,9 +43,7 @@ button{
     border-radius: 20px solid rgb(73, 71, 71);
 
 }
-button:hover{
-    background-color: #a7a7a7;
-}
+
 
 
 #radio{
@@ -95,6 +93,22 @@ button:hover{
     align-items:start;
     padding-left: 200px;
 }
+
+#data_evento{
+    width: 20%;
+    height: 50px;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 @media only screen and (max-width: 600px) {
