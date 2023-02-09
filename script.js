@@ -64,3 +64,29 @@ document.getElementById("mostrar_data").onclick = function(){
 
     document.getElementById("resultado_data").innerHTML = dia + "/"+ mes + "/"+ ano
 }
+
+//box com onchange
+document.getElementById("options_ensino").onchange = function(){
+    var campoSelect = document.getElementById("options_ensino");
+    var indiceSelecionado = campoSelect.options.selectedIndex;
+    var valorSelecionado = campoSelect.options[indiceSelecionado].innerHTML;
+    document.getElementById("ensino_selecionada").innerHTML = valorSelecionado;
+    
+}
+
+//checkbox onchange
+
+
+
+var check_onchange = document.getElementsByName("interesse2");
+
+for(var ii=0;ii<check_onchange.length;ii++){
+    check_onchange[ii].onchange = function(){
+        document.getElementById("lista_compra").innerHTML="";
+        for(var aa=0;aa<check_onchange.length;aa++){
+            if(check_onchange[aa].checked){
+                document.getElementById("lista_compra").innerHTML+="<li>"+ check_onchange[aa].value+"</li>" ;
+            }
+        }
+    }
+}

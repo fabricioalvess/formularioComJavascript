@@ -99,7 +99,18 @@ button{
     height: 50px;
     margin-bottom: 20px;
 }
-
+#checksBoxOnchange{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding-left: 200px;
+}
+#formularioCheck{
+    width: 80%;
+    height: auto;
+}
 
 
 
@@ -144,8 +155,6 @@ form{
      cursor: pointer;
  
  }
- button:hover{
-     background-color: #fafafa;
- }
+
  
 }

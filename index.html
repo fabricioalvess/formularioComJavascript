@@ -16,7 +16,7 @@
         <h1>Formularios</h1>
     </nav>
     <section id="containerGeneral">
-
+        <h1 style="margin: 30px;">Eventos Onclick :</h1>
         <h5>Select Box</h5>
         <p>utilizando: options.selectedIndex</p>
         
@@ -94,6 +94,45 @@
         <br>
         <br>
 
+        <h1 style="margin: 30px;">Eventos Onchange :</h1>
+
+        <h5>checkbox </h5>
+        
+        <form  >
+            
+            <select id="options_ensino">
+
+                <option value="opt1">Ensino Medio</option>
+                <option value="opt2">Superior</option>
+                <option value="opt3">Pós</option>
+            </select>
+        </form>
+       
+        <p>Solte aqui a opção selecionada:<br> <strong id="ensino_selecionada"> </strong></p>
+        
+<br>
+<br>
+
+        <form>
+            <section id="checksBoxOnchange">
+            <div>
+                <input type="checkbox" name="interesse2" value="arroz">arroz <br>
+            </div>
+        
+            <div>
+                <input type="checkbox" name="interesse2" value="feijao">feijao<br>
+            </div>
+            
+            <div>
+                <input type="checkbox" name="interesse2" value="salsicha">salsicha<br>
+            </div>
+            </section>
+   
+        </form>
+<br>
+
+<p>Solte a lista aqui: <br><strong id="lista_compra"></strong></p>
+<br>
     </section>
     
 
