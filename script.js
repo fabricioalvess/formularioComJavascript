@@ -90,3 +90,45 @@ for(var ii=0;ii<check_onchange.length;ii++){
         }
     }
 }
+
+
+
+//------------------------------------------------------------------------------------------------------------------------------------
+//compra de supermercados
+
+
+
+var valorTotalDaCompra = 0;
+function validacao(prod,qt,pre){
+if(prod == "" || qt =="" || pre ==""){
+    alert("campos invalidos")
+}
+}
+function somaProdutos(a,b){
+    var vl1 = a;
+    var vl2 = b;
+    valorTotalDaCompra+=(vl1*vl2);
+    return valorTotalDaCompra;
+ };
+
+function listadeProd(nome, qtd, valor){
+    var nomeP = nome;
+    var qtdP = qtd;
+    var vlP = valor;
+    var linhaP = "<li>" + (nomeP + " " + qtdP + " "+ (qtdP * vlP))+ "</li>";
+    return linhaP;
+}
+
+
+
+
+document.getElementById("enviarProd").onclick = function(){
+    var nomeProd = document.getElementById("nomeProd").value;
+    var quantidadeProd =document.getElementById("quantidadeProd").value;
+    var valorProd = document.getElementById("valorProd").value;
+    validacao(nomeProd,quantidadeProd,valorProd);
+   
+    document.getElementById("listaCompra").innerHTML += listadeProd(nomeProd, quantidadeProd,valorProd); 
+    document.getElementById("soma").innerHTML ="<li>"+ " Valor total da compra : " + somaProdutos(quantidadeProd,valorProd).toFixed(2)+" R$";
+}
+//--------------------------------fim compras de supermercados-------------------------------------------------------------------------------

@@ -112,7 +112,14 @@ button{
     height: auto;
 }
 
-
+.linhadeproduto{
+    width: 80%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
 
 
